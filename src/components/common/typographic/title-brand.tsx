@@ -9,7 +9,8 @@ type TitleVariant =
   | 'card'
   | 'primary'
   | 'secondary'
-  | 'accent';
+  | 'accent'
+  | 'hero';
 
 interface TitleBrandProps {
   children: ReactNode;
@@ -31,6 +32,7 @@ export function TitleBrand({
     primary: 'text-primary',
     secondary: 'text-secondary',
     accent: 'text-accent',
+    hero: 'text-4xl sm:text-5xl md:text-6xl font-extrabold text-primary tracking-tight',
   };
 
   const componentStyles: Record<string, string> = {

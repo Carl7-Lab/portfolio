@@ -10,7 +10,8 @@ type TextVariant =
   | 'caption'
   | 'primary'
   | 'secondary'
-  | 'accent';
+  | 'accent'
+  | 'hero-lead';
 
 interface TextBrandProps {
   children: ReactNode;
@@ -31,6 +32,7 @@ export function TextBrand({
     primary: 'text-primary font-mulish',
     secondary: 'text-secondary font-jost',
     accent: 'text-accent font-jost',
+    'hero-lead': 'text-2xl sm:text-3xl font-bold text-primary',
   };
 
   return <p className={cn(variantStyles[variant], className)}>{children}</p>;

@@ -3,6 +3,8 @@ import { Mulish, Raleway, Jost } from 'next/font/google';
 import './globals.css';
 import { JSX } from 'react';
 
+import { HeaderBrand } from '@/components/common/header-brand';
+
 const mulish = Mulish({
   subsets: ['latin'],
   variable: '--font-mulish',
@@ -40,6 +42,7 @@ export default function RootLayout({
       <body
         className={`${mulish.variable} ${raleway.variable} ${jost.variable}`}
       >
+        <HeaderBrand sticky variant="transparent" />
         {children}
       </body>
     </html>
