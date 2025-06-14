@@ -1,7 +1,7 @@
-import { SunIcon } from 'lucide-react';
 import Link from 'next/link';
 import { JSX } from 'react';
 
+import { ThemeToggle } from '@/components/theme/theme-toggle';
 import { headerBrand } from '@/lib/contents/header';
 import { cn } from '@/lib/utils';
 
@@ -50,12 +50,9 @@ export function HeaderBrand({
             </a>
           ))}
         </nav>
-        <button
-          aria-label="Toggle dark mode"
-          className="ml-4 p-2 rounded-full hover:bg-accent transition-colors"
-        >
-          <SunIcon className="w-6 h-6" />
-        </button>
+        <div className="ml-4">
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
