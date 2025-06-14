@@ -1,5 +1,3 @@
-// Contenido estático para el header
-
 export const headerBrand = {
   name: {
     first: 'Carlos',

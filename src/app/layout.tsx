@@ -3,7 +3,6 @@ import { Mulish, Raleway, Jost } from 'next/font/google';
 import './globals.css';
 import { JSX } from 'react';
 
-import { HeaderBrand } from '@/components/common/header-brand';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 
 const mulish = Mulish({
@@ -22,22 +21,26 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'Personal portfolio showcasing my work and skills',
-  keywords: ['portfolio', 'developer', 'web development', 'software engineer'],
-  authors: [{ name: 'Your Name' }],
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
-    { media: '(prefers-color-scheme: dark)', color: '#121212' },
+  title: 'Carlos Cuesta - FullStack Developer Portfolio',
+  description:
+    'Portfolio profesional de Carlos Cuesta, FullStack Developer con más de 3 años de experiencia en JavaScript, React, Node.js y TypeScript.',
+  keywords: [
+    'carlos cuesta',
+    'fullstack developer',
+    'react',
+    'nodejs',
+    'typescript',
+    'javascript',
+    'portfolio',
   ],
+  authors: [{ name: 'Carlos Cuesta' }],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}): JSX.Element {
+}): Promise<JSX.Element> {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -49,7 +52,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <HeaderBrand sticky variant="transparent" />
           {children}
         </ThemeProvider>
       </body>

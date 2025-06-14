@@ -5,11 +5,11 @@ import { CardBrand } from '@/components/common/card-brand/card-brand';
 import { TextBrand } from '@/components/common/typographic/text-brand';
 import { TitleBrand } from '@/components/common/typographic/title-brand';
 import { Badge } from '@/components/ui/badge';
-import { projectsContent } from '@/lib/contents/projects';
+import { Dictionary } from '@/lib/dictionaries';
 
-export const ProjectsSection: FC = () => {
-  const featuredProjects = projectsContent.projects.filter(p => p.featured);
-  const otherProjects = projectsContent.projects.filter(p => !p.featured);
+export const ProjectsSection: FC<{ dict: Dictionary }> = ({ dict }) => {
+  const featuredProjects = dict.home.projects.projects.filter(p => p.featured);
+  const otherProjects = dict.home.projects.projects.filter(p => !p.featured);
 
   return (
     <section id="projects" className="py-20">
@@ -20,16 +20,16 @@ export const ProjectsSection: FC = () => {
             as="h2"
             className="mb-2 bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent"
           >
-            {projectsContent.title}
+            {dict.home.projects.title}
           </TitleBrand>
           <TextBrand variant="lead" className="mb-2 text-muted-foreground">
-            {projectsContent.subtitle}
+            {dict.home.projects.subtitle}
           </TextBrand>
           <TextBrand
             variant="body"
             className="max-w-2xl mx-auto text-muted-foreground"
           >
-            {projectsContent.description}
+            {dict.home.projects.description}
           </TextBrand>
         </div>
 
@@ -84,14 +84,13 @@ export const ProjectsSection: FC = () => {
           ))}
         </div>
 
-        {/* Other Projects */}
         <div>
           <TitleBrand
             variant="primary"
             as="h3"
             className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent"
           >
-            Otros Proyectos
+            {dict.home.projects.otherProjectsTitle}
           </TitleBrand>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {otherProjects.map((project, index) => (

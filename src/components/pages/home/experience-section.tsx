@@ -5,29 +5,29 @@ import { CardBrand } from '@/components/common/card-brand/card-brand';
 import { TextBrand } from '@/components/common/typographic/text-brand';
 import { TitleBrand } from '@/components/common/typographic/title-brand';
 import { Badge } from '@/components/ui/badge';
-import { experienceContent } from '@/lib/contents/experience';
+import { Dictionary } from '@/lib/dictionaries';
 
-export const ExperienceSection: FC = () => (
+export const ExperienceSection: FC<{ dict: Dictionary }> = ({ dict }) => (
   <section id="experience" className="pt-18">
     <div className="container mx-auto px-4">
       <div className="text-center mb-12">
         <TitleBrand variant="section" as="h2" className="mb-2">
-          {experienceContent.title}
+          {dict.home.experience.title}
         </TitleBrand>
         <TextBrand variant="lead" className="mb-2 text-muted-foreground">
-          {experienceContent.subtitle}
+          {dict.home.experience.subtitle}
         </TextBrand>
         <TextBrand
           variant="body"
           className="max-w-2xl mx-auto text-muted-foreground"
         >
-          {experienceContent.description}
+          {dict.home.experience.description}
         </TextBrand>
       </div>
       <div className="max-w-4xl mx-auto">
-        {experienceContent.experiences.map((exp, index) => (
+        {dict.home.experience.experiences.map((exp, index) => (
           <div key={index} className="relative">
-            {index !== experienceContent.experiences.length - 1 && (
+            {index !== dict.home.experience.experiences.length - 1 && (
               <div className="absolute left-6 top-16 w-0.5 h-full bg-border" />
             )}
             <CardBrand variant="elevated" className="mb-8 ml-12 relative">
