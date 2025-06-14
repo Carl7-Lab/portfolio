@@ -1,26 +1,22 @@
-import { type ReactNode } from 'react';
-import { type JSX } from 'react';
+import { SunIcon } from 'lucide-react';
+import Link from 'next/link';
+import { JSX } from 'react';
 
+import { headerBrand } from '@/lib/contents/header';
 import { cn } from '@/lib/utils';
 
-type HeaderVariant = 'default' | 'transparent' | 'bordered';
-
-interface HeaderBrandProps {
-  children: ReactNode;
-  className?: string;
-  variant?: HeaderVariant;
-  sticky?: boolean;
-}
-
 export function HeaderBrand({
-  children,
   className,
   variant = 'default',
   sticky = false,
-}: HeaderBrandProps): JSX.Element {
-  const variantStyles: Record<HeaderVariant, string> = {
+}: {
+  className?: string;
+  variant?: 'default' | 'transparent' | 'bordered';
+  sticky?: boolean;
+}): JSX.Element {
+  const variantStyles: Record<string, string> = {
     default: 'bg-background shadow-sm',
-    transparent: 'bg-transparent',
+    transparent: 'glass-effect backdrop-blur-md border-b border-white/20',
     bordered: 'bg-background border-b border-border',
   };
 
@@ -34,7 +30,32 @@ export function HeaderBrand({
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {children}
+        <Link href="/" className="text-2xl font-bold text-primary">
+          <span className={headerBrand.name.firstClass}>
+            {headerBrand.name.first}
+          </span>
+          <span className={headerBrand.name.lastClass}>
+            {' '}
+            {headerBrand.name.last}
+          </span>
+        </Link>
+        <nav className="hidden md:flex gap-8 text-base font-medium">
+          {headerBrand.navLinks.map(link => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="hover:text-primary transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+        <button
+          aria-label="Toggle dark mode"
+          className="ml-4 p-2 rounded-full hover:bg-accent transition-colors"
+        >
+          <SunIcon className="w-6 h-6" />
+        </button>
       </div>
     </header>
   );

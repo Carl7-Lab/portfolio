@@ -3,7 +3,13 @@ import { type JSX } from 'react';
 
 import { cn } from '@/lib/utils';
 
-type ButtonVariant = 'primary' | 'secondary' | 'accent' | 'ghost' | 'outline';
+type ButtonVariant =
+  | 'primary'
+  | 'secondary'
+  | 'accent'
+  | 'ghost'
+  | 'outline'
+  | 'link';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
 interface ButtonBrandProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -26,11 +32,13 @@ export function ButtonBrand({
   ...props
 }: ButtonBrandProps): JSX.Element {
   const variantStyles: Record<ButtonVariant, string> = {
-    primary: 'bg-primary text-white hover:bg-primary/90',
-    secondary: 'bg-secondary text-white hover:bg-secondary/90',
-    accent: 'bg-accent text-white hover:bg-accent/90',
-    ghost: 'hover:bg-background hover:text-primary',
-    outline: 'border border-border hover:bg-background hover:text-primary',
+    primary: 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm',
+    secondary:
+      'bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-sm',
+    accent: 'bg-accent text-accent-foreground hover:bg-accent/90 shadow-sm',
+    outline: 'border border-primary text-primary hover:bg-primary/10 shadow-sm',
+    ghost: 'text-primary hover:bg-primary/10',
+    link: 'text-primary underline-offset-4 hover:underline',
   };
 
   const sizeStyles: Record<ButtonSize, string> = {
