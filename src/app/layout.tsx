@@ -4,6 +4,7 @@ import './globals.css';
 import { JSX } from 'react';
 
 import { HeaderBrand } from '@/components/common/header-brand';
+import { ThemeProvider } from '@/components/theme/theme-provider';
 
 const mulish = Mulish({
   subsets: ['latin'],
@@ -42,8 +43,15 @@ export default function RootLayout({
       <body
         className={`${mulish.variable} ${raleway.variable} ${jost.variable}`}
       >
-        <HeaderBrand sticky variant="transparent" />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <HeaderBrand sticky variant="transparent" />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
