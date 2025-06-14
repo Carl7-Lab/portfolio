@@ -34,7 +34,7 @@ export function CardBrand({
   };
 
   return (
-    <div className={cn('p-6', variantStyles[variant], className)}>
+    <div className={cn('p-6 rounded-lg', variantStyles[variant], className)}>
       {children}
     </div>
   );

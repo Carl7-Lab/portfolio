@@ -1,41 +1,134 @@
+import Image from 'next/image';
 import { FC } from 'react';
 
+import { CardBrand } from '@/components/common/card-brand/card-brand';
 import { TextBrand } from '@/components/common/typographic/text-brand';
 import { TitleBrand } from '@/components/common/typographic/title-brand';
+import { Badge } from '@/components/ui/badge';
 import { projectsContent } from '@/lib/contents/projects';
 
-export const ProjectsSection: FC = () => (
-  <section id="projects" className="py-12">
-    <TitleBrand variant="section" as="h2" className="mb-8">
-      Projects
-    </TitleBrand>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {projectsContent.map(project => (
-        <div
-          key={project.name}
-          className="bg-card rounded-lg p-6 shadow-sm border border-border"
-        >
-          <div className="font-semibold text-primary text-lg mb-2">
-            {project.name}
-          </div>
-          <TextBrand variant="body" className="mb-2">
-            {project.description}
+export const ProjectsSection: FC = () => {
+  const featuredProjects = projectsContent.projects.filter(p => p.featured);
+  const otherProjects = projectsContent.projects.filter(p => !p.featured);
+
+  return (
+    <section id="projects" className="py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <TitleBrand
+            variant="section"
+            as="h2"
+            className="mb-2 bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent"
+          >
+            {projectsContent.title}
+          </TitleBrand>
+          <TextBrand variant="lead" className="mb-2 text-muted-foreground">
+            {projectsContent.subtitle}
           </TextBrand>
-          <div className="text-xs text-muted-foreground mb-2">
-            Tech Stack: {project.stack}
-          </div>
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent underline text-sm"
-            >
-              View Project
-            </a>
-          )}
+          <TextBrand
+            variant="body"
+            className="max-w-2xl mx-auto text-muted-foreground"
+          >
+            {projectsContent.description}
+          </TextBrand>
         </div>
-      ))}
-    </div>
-  </section>
-);
+
+        <div className="grid lg:grid-cols-1 gap-8 mb-16 max-w-6xl mx-auto">
+          {featuredProjects.map((project, index) => (
+            <CardBrand
+              key={index}
+              variant="elevated"
+              className={`overflow-hidden group hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]`}
+            >
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="relative overflow-hidden">
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-20`}
+                  />
+                  <Image
+                    src={project.image || '/placeholder.svg'}
+                    alt={project.name}
+                    width={500}
+                    height={300}
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <TitleBrand
+                    variant="card"
+                    as="h3"
+                    className="mb-2 group-hover:text-blue-600 transition-colors duration-300"
+                  >
+                    {project.name}
+                  </TitleBrand>
+                  <TextBrand
+                    variant="body"
+                    className="mb-4 text-muted-foreground"
+                  >
+                    {project.description}
+                  </TextBrand>
+                  <div className="flex flex-wrap gap-2">
+                    {project.stack.split(',').map(tech => (
+                      <Badge
+                        key={tech}
+                        variant="secondary"
+                        className="hover:scale-105 transition-transform duration-200"
+                      >
+                        {tech.trim()}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </CardBrand>
+          ))}
+        </div>
+
+        {/* Other Projects */}
+        <div>
+          <TitleBrand
+            variant="primary"
+            as="h3"
+            className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent"
+          >
+            Otros Proyectos
+          </TitleBrand>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {otherProjects.map((project, index) => (
+              <CardBrand
+                key={index}
+                variant="bordered"
+                className="hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+              >
+                <TitleBrand
+                  variant="card"
+                  as="h4"
+                  className="mb-2 group-hover:text-blue-600 transition-colors duration-300"
+                >
+                  {project.name}
+                </TitleBrand>
+                <TextBrand
+                  variant="body"
+                  className="mb-4 text-muted-foreground text-sm"
+                >
+                  {project.description}
+                </TextBrand>
+                <div className="flex flex-wrap gap-1">
+                  {project.stack.split(',').map(tech => (
+                    <Badge
+                      key={tech}
+                      variant="outline"
+                      className="text-xs hover:scale-105 transition-transform duration-200"
+                    >
+                      {tech.trim()}
+                    </Badge>
+                  ))}
+                </div>
+              </CardBrand>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

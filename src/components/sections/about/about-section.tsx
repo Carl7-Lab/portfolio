@@ -15,32 +15,31 @@ const iconMap = {
 };
 
 export const AboutSection: FC = () => (
-  <section id="about" className="py-18">
+  <section id="about" className="pt-18">
     <div className="container mx-auto px-4">
-      <div className="flex flex-col items-center justify-center">
+      <div className="text-center mb-16">
         <TitleBrand
           variant="section"
           as="h2"
-          className="mb-2 text-center md:text-left"
+          className="mb-2 bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent"
         >
           {aboutContent.title}
         </TitleBrand>
         <TextBrand
           variant="lead"
-          className="mb-8 text-center md:text-left text-muted-foreground"
+          className="text-muted-foreground max-w-2xl mx-auto"
         >
           {aboutContent.subtitle}
         </TextBrand>
       </div>
-
-      <div className="mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-        <div className="md:col-span-1">
+      <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div>
           {aboutContent.paragraphs.map((p, i) => (
-            <TextBrand key={i} variant="body" className="mb-4 text-left">
+            <TextBrand key={i} variant="body" className="mb-6 text-left">
               {p}
             </TextBrand>
           ))}
-          <div className="flex flex-wrap gap-2 mt-4">
+          <div className="flex flex-wrap gap-2 mt-2">
             {aboutContent.badges.map(badge => (
               <Badge
                 key={badge.label}
@@ -52,15 +51,14 @@ export const AboutSection: FC = () => (
             ))}
           </div>
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:col-span-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {aboutContent.cards.map(card => {
             const Icon = iconMap[card.icon as keyof typeof iconMap];
             return (
               <CardBrand
                 key={card.title}
                 variant="elevated"
-                className="flex flex-col gap-3 min-h-[150px] justify-between hover:scale-105 transition-transform"
+                className="flex flex-col gap-3 min-h-[150px] justify-between hover:scale-110 transition-all duration-300"
               >
                 <div
                   className={`w-full h-10 rounded-xl flex items-center justify-start pl-4 bg-gradient-to-r ${card.color} mb-2`}
