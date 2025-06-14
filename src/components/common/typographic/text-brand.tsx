@@ -24,18 +24,14 @@ export function TextBrand({
   variant = 'body',
 }: TextBrandProps): JSX.Element {
   const variantStyles: Record<TextVariant, string> = {
-    body: 'text-base text-primary leading-relaxed',
-    lead: 'text-lg text-primary leading-relaxed',
-    small: 'text-sm text-secondary',
-    caption: 'text-xs text-secondary',
-    primary: 'text-primary',
-    secondary: 'text-secondary',
-    accent: 'text-accent',
+    body: 'text-base text-primary leading-relaxed font-mulish',
+    lead: 'text-lg text-primary leading-relaxed font-mulish',
+    small: 'text-sm text-secondary font-jost',
+    caption: 'text-xs text-secondary font-jost',
+    primary: 'text-primary font-mulish',
+    secondary: 'text-secondary font-jost',
+    accent: 'text-accent font-jost',
   };
 
-  return (
-    <p className={cn('font-roboto', variantStyles[variant], className)}>
-      {children}
-    </p>
-  );
+  return <p className={cn(variantStyles[variant], className)}>{children}</p>;
 }

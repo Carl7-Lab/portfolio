@@ -1,29 +1,21 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import { Roboto, Nunito_Sans } from 'next/font/google';
+import { Mulish, Raleway, Jost } from 'next/font/google';
 import './globals.css';
 import { JSX } from 'react';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const mulish = Mulish({
   subsets: ['latin'],
+  variable: '--font-mulish',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const raleway = Raleway({
   subsets: ['latin'],
+  variable: '--font-raleway',
 });
 
-const roboto = Roboto({
-  weight: ['400', '500', '700'],
+const jost = Jost({
   subsets: ['latin'],
-  variable: '--font-roboto',
-});
-
-const nunitoSans = Nunito_Sans({
-  weight: ['400', '600', '700'],
-  subsets: ['latin'],
-  variable: '--font-nunito',
+  variable: '--font-jost',
 });
 
 export const metadata: Metadata = {
@@ -40,13 +32,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>): JSX.Element {
+}): JSX.Element {
   return (
-    <html lang="en" className="light">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${nunitoSans.variable} antialiased`}
+        className={`${mulish.variable} ${raleway.variable} ${jost.variable}`}
       >
         {children}
       </body>

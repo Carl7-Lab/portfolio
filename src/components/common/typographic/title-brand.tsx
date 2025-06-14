@@ -43,7 +43,7 @@ export function TitleBrand({
   return (
     <Component
       className={cn(
-        'font-nunito',
+        'font-raleway',
         variantStyles[variant],
         componentStyles[Component],
         className
