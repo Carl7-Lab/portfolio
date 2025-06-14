@@ -5,7 +5,7 @@ import { CardBrand } from '@/components/common/card-brand/card-brand';
 import { TextBrand } from '@/components/common/typographic/text-brand';
 import { TitleBrand } from '@/components/common/typographic/title-brand';
 import { Badge } from '@/components/ui/badge';
-import { aboutContent } from '@/lib/contents/about';
+import { Dictionary } from '@/lib/dictionaries';
 
 const iconMap = {
   code: Code,
@@ -14,7 +14,7 @@ const iconMap = {
   users: Users,
 };
 
-export const AboutSection: FC = () => (
+export const AboutSection: FC<{ dict: Dictionary }> = ({ dict }) => (
   <section id="about" className="pt-18">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
@@ -23,24 +23,24 @@ export const AboutSection: FC = () => (
           as="h2"
           className="mb-2 bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent"
         >
-          {aboutContent.title}
+          {dict.home.about.title}
         </TitleBrand>
         <TextBrand
           variant="lead"
           className="text-muted-foreground max-w-2xl mx-auto"
         >
-          {aboutContent.subtitle}
+          {dict.home.about.subtitle}
         </TextBrand>
       </div>
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          {aboutContent.paragraphs.map((p, i) => (
+          {dict.home.about.paragraphs.map((p, i) => (
             <TextBrand key={i} variant="body" className="mb-6 text-left">
               {p}
             </TextBrand>
           ))}
           <div className="flex flex-wrap gap-2 mt-2">
-            {aboutContent.badges.map(badge => (
+            {dict.home.about.badges.map(badge => (
               <Badge
                 key={badge.label}
                 variant="secondary"
@@ -52,7 +52,7 @@ export const AboutSection: FC = () => (
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {aboutContent.cards.map(card => {
+          {dict.home.about.cards.map(card => {
             const Icon = iconMap[card.icon as keyof typeof iconMap];
             return (
               <CardBrand

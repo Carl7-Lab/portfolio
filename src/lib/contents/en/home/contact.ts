@@ -1,8 +1,9 @@
 export const contactContent = {
-  title: 'Contacto',
-  subtitle: '¿Tienes un proyecto en mente? Me encantaría escuchar sobre él',
+  title: 'Contact',
+  subtitle: 'Have a project in mind? I would love to hear about it',
   description:
-    'Estoy siempre abierto a discutir nuevas oportunidades, proyectos interesantes o simplemente charlar sobre tecnología. No dudes en contactarme.',
+    'I am always open to discussing new opportunities, interesting projects, or just chatting about technology. Feel free to contact me.',
+  talkToMe: 'Talk to me',
   contactInfo: [
     {
       type: 'email',
@@ -12,13 +13,13 @@ export const contactContent = {
     },
     {
       type: 'phone',
-      label: 'Teléfono',
+      label: 'Phone',
       value: '(+593) 0997198525',
       href: 'tel:+5930997198525',
     },
     {
       type: 'location',
-      label: 'Ubicación',
+      label: 'Location',
       value: 'Machala, Ecuador (GMT-5)',
       href: '#',
     },

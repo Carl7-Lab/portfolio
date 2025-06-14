@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import { JSX } from 'react';
 
 import { LinkBrand } from '@/components/common/link-brand';
-import { footerContent } from '@/lib/contents/footer';
+import { Dictionary } from '@/lib/dictionaries';
 
 const iconMap = {
   github: Github,
@@ -10,16 +10,16 @@ const iconMap = {
   mail: Mail,
 };
 
-export function Footer(): JSX.Element {
+export function Footer({ dict }: { dict: Dictionary }): JSX.Element {
   return (
     <footer className="bg-background border-t">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <p className="text-muted-foreground">{footerContent.copyright}</p>
+            <p className="text-muted-foreground">{dict.footer.copyright}</p>
           </div>
           <div className="flex items-center space-x-4">
-            {footerContent.socials.map(social => {
+            {dict.footer.socials.map(social => {
               const Icon = iconMap[social.icon as keyof typeof iconMap];
               return (
                 <LinkBrand

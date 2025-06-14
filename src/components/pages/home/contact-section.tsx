@@ -1,11 +1,9 @@
-'use client';
-
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { JSX } from 'react';
 
 import { TextBrand } from '@/components/common/typographic/text-brand';
 import { TitleBrand } from '@/components/common/typographic/title-brand';
-import { contactContent } from '@/lib/contents/contact';
+import { Dictionary } from '@/lib/dictionaries';
 
 const iconMap = {
   email: Mail,
@@ -13,19 +11,19 @@ const iconMap = {
   location: MapPin,
 };
 
-export function ContactSection(): JSX.Element {
+export function ContactSection({ dict }: { dict: Dictionary }): JSX.Element {
   return (
     <section id="contact" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <TitleBrand variant="section" as="h2" className="mb-4">
-            {contactContent.title}
+            {dict.home.contact.title}
           </TitleBrand>
           <TextBrand
             variant="lead"
             className="mb-2 text-muted-foreground max-w-2xl mx-auto"
           >
-            {contactContent.subtitle}
+            {dict.home.contact.subtitle}
           </TextBrand>
         </div>
         <div className="grid lg:grid-cols-1 gap-12 max-w-3xl mx-auto justify-center">
@@ -35,16 +33,16 @@ export function ContactSection(): JSX.Element {
               as="h3"
               className="text-2xl font-semibold mb-6"
             >
-              Hablemos
+              {dict.home.contact.talkToMe}
             </TitleBrand>
             <TextBrand
               variant="body"
               className="text-muted-foreground mb-8 leading-relaxed"
             >
-              {contactContent.description}
+              {dict.home.contact.description}
             </TextBrand>
             <div className="space-y-4">
-              {contactContent.contactInfo.map((info, index) => {
+              {dict.home.contact.contactInfo.map((info, index) => {
                 const Icon = iconMap[info.type as keyof typeof iconMap];
                 return (
                   <div

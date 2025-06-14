@@ -9,6 +9,7 @@ export const skillsContent = {
   subtitle: 'Tecnologías y herramientas que domino en mi trabajo diario',
   description:
     'A continuación se muestran las principales tecnologías, frameworks, herramientas y metodologías que utilizo en el desarrollo de proyectos web.',
+  additionalTitle: 'Conocimientos Adicionales',
   categories: [
     {
       category: 'Frontend',

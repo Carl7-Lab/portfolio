@@ -14,6 +14,7 @@ export const projectsContent = {
     'Mis proyectos más recientes y significativos como FullStack Developer',
   description:
     'A continuación se muestran algunos de los proyectos en los que he trabajado, aplicando buenas prácticas, tecnologías modernas y un enfoque en la experiencia de usuario.',
+  otherProjectsTitle: 'Otros Proyectos',
   projects: [
     {
       name: 'Sistema de Gestión Agrícola - Agropaís',

@@ -2,17 +2,23 @@ import Link from 'next/link';
 import { JSX } from 'react';
 
 import { ThemeToggle } from '@/components/theme/theme-toggle';
-import { headerBrand } from '@/lib/contents/header';
+import { Dictionary } from '@/lib/dictionaries';
 import { cn } from '@/lib/utils';
+
+import { LanguageSwitcher } from './language-switcher';
 
 export function HeaderBrand({
   className,
   variant = 'default',
   sticky = false,
+  lang,
+  dict,
 }: {
   className?: string;
   variant?: 'default' | 'transparent' | 'bordered';
   sticky?: boolean;
+  lang: 'es' | 'en';
+  dict: Dictionary;
 }): JSX.Element {
   const variantStyles: Record<string, string> = {
     default: 'bg-background shadow-sm',
@@ -30,17 +36,17 @@ export function HeaderBrand({
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold text-primary">
-          <span className={headerBrand.name.firstClass}>
-            {headerBrand.name.first}
+        <Link href={`/${lang}`} className="text-2xl font-bold text-primary">
+          <span className={dict.header.name.firstClass}>
+            {dict.header.name.first}
           </span>
-          <span className={headerBrand.name.lastClass}>
+          <span className={dict.header.name.lastClass}>
             {' '}
-            {headerBrand.name.last}
+            {dict.header.name.last}
           </span>
         </Link>
         <nav className="hidden md:flex gap-8 text-base font-medium">
-          {headerBrand.navLinks.map(link => (
+          {dict.header.navLinks.map(link => (
             <a
               key={link.href}
               href={link.href}
@@ -50,7 +56,8 @@ export function HeaderBrand({
             </a>
           ))}
         </nav>
-        <div className="ml-4">
+        <div className="ml-4 flex items-center gap-2">
+          <LanguageSwitcher />
           <ThemeToggle />
         </div>
       </div>
