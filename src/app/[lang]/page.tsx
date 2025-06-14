@@ -8,9 +8,10 @@ import { HeroSection } from '@/components/pages/home/hero-section';
 import { ProjectsSection } from '@/components/pages/home/projects-section';
 import { SkillsSection } from '@/components/pages/home/skills-section';
 import { getDictionary } from '@/lib/dictionaries';
+import { LanguageList } from '@/lib/types/core/language';
 
 type Props = {
-  params: Promise<{ lang: 'es' | 'en' }>;
+  params: Promise<{ lang: LanguageList }>;
 };
 
 export default async function Home({ params }: Props): Promise<JSX.Element> {

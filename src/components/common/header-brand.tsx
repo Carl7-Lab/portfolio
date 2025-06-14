@@ -3,6 +3,7 @@ import { JSX } from 'react';
 
 import { ThemeToggle } from '@/components/theme/theme-toggle';
 import { Dictionary } from '@/lib/dictionaries';
+import { LanguageList } from '@/lib/types/core/language';
 import { cn } from '@/lib/utils';
 
 import { LanguageSwitcher } from './language-switcher';
@@ -17,7 +18,7 @@ export function HeaderBrand({
   className?: string;
   variant?: 'default' | 'transparent' | 'bordered';
   sticky?: boolean;
-  lang: 'es' | 'en';
+  lang: LanguageList;
   dict: Dictionary;
 }): JSX.Element {
   const variantStyles: Record<string, string> = {

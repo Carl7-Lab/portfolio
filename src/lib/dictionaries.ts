@@ -1,4 +1,5 @@
 import 'server-only';
+import { LanguageList } from './types/core/language';
 
 export type Dictionary = {
   home: typeof import('./contents/es/home').homeContent;
@@ -7,9 +8,11 @@ export type Dictionary = {
 };
 
 const dictionaries = {
-  es: () => import('./contents/es').then(module => module.es),
-  en: () => import('./contents/en').then(module => module.en),
+  [LanguageList.ES]: () => import('./contents/es').then(module => module.es),
+  [LanguageList.EN]: () => import('./contents/en').then(module => module.en),
 };
 
-export const getDictionary = async (locale: 'es' | 'en'): Promise<Dictionary> =>
-  dictionaries[locale]?.() ?? dictionaries.es();
+export const getDictionary = async (
+  locale: LanguageList
+): Promise<Dictionary> =>
+  dictionaries[locale]?.() ?? dictionaries[LanguageList.ES]();
