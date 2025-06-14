@@ -11,17 +11,18 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { LanguageList } from '@/lib/types/core/language';
 
 const languages = [
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: LanguageList.ES, name: 'Español', flag: '🇪🇸' },
+  { code: LanguageList.EN, name: 'English', flag: '🇺🇸' },
 ];
 
 export function LanguageSwitcher(): JSX.Element {
   const pathname = usePathname();
   const router = useRouter();
 
-  const currentLang = pathname.split('/')[1] || 'es';
+  const currentLang = pathname.split('/')[1] || LanguageList.ES;
 
   const switchLanguage = (newLang: string): void => {
     const segments = pathname.split('/');

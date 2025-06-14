@@ -1,8 +1,10 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-const locales = ['es', 'en'];
-const defaultLocale = 'es';
+import { LanguageList } from '@/lib/types/core/language';
+
+const locales = Object.values(LanguageList);
+const defaultLocale = LanguageList.ES;
 
 function getLocale(request: NextRequest): string {
   const { pathname } = request.nextUrl;
@@ -19,7 +21,7 @@ function getLocale(request: NextRequest): string {
     const preferredLocale = acceptLanguage
       .split(',')
       .map(lang => lang.split(';')[0].trim())
-      .find(lang => locales.includes(lang.split('-')[0]));
+      .find(lang => locales.includes(lang.split('-')[0] as LanguageList));
 
     if (preferredLocale) {
       return preferredLocale.split('-')[0];
