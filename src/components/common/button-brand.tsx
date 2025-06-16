@@ -1,4 +1,4 @@
-import { type ButtonHTMLAttributes, type ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { type JSX } from 'react';
 
 import { cn } from '@/lib/utils';
@@ -7,19 +7,20 @@ type ButtonVariant =
   | 'primary'
   | 'secondary'
   | 'accent'
-  | 'ghost'
   | 'outline'
+  | 'ghost'
   | 'link';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
-interface ButtonBrandProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonBrandProps = {
   children: ReactNode;
   className?: string;
   variant?: ButtonVariant;
   size?: ButtonSize;
   fullWidth?: boolean;
   isLoading?: boolean;
-}
+  disabled?: boolean;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export function ButtonBrand({
   children,
@@ -32,13 +33,16 @@ export function ButtonBrand({
   ...props
 }: ButtonBrandProps): JSX.Element {
   const variantStyles: Record<ButtonVariant, string> = {
-    primary: 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm',
+    primary:
+      'bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm font-ibm-plex',
     secondary:
-      'bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-sm',
-    accent: 'bg-accent text-accent-foreground hover:bg-accent/90 shadow-sm',
-    outline: 'border border-primary text-primary hover:bg-primary/10 shadow-sm',
-    ghost: 'text-primary hover:bg-primary/10',
-    link: 'text-primary underline-offset-4 hover:underline',
+      'bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-sm font-ibm-plex',
+    accent:
+      'bg-accent text-accent-foreground hover:bg-accent/90 shadow-sm font-ibm-plex',
+    outline:
+      'border border-primary text-primary hover:bg-primary/10 shadow-sm font-ibm-plex',
+    ghost: 'text-primary hover:bg-primary/10 font-ibm-plex',
+    link: 'text-primary underline-offset-4 hover:underline font-ibm-plex',
   };
 
   const sizeStyles: Record<ButtonSize, string> = {

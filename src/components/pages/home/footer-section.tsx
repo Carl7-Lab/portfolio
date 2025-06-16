@@ -25,7 +25,7 @@ export function Footer({ dict }: { dict: Dictionary }): JSX.Element {
                 <LinkBrand
                   key={social.label}
                   href={social.href}
-                  isExternal={social.href.startsWith('http')}
+                  external={social.href.startsWith('http')}
                   aria-label={social.label}
                   className="inline-flex items-center justify-center w-8 h-8 rounded-md hover:bg-accent transition-colors"
                 >

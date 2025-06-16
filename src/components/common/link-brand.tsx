@@ -1,59 +1,52 @@
-import NextLink from 'next/link';
-import { type AnchorHTMLAttributes, type ReactNode } from 'react';
+import Link from 'next/link';
+import { type ReactNode } from 'react';
 import { type JSX } from 'react';
 
 import { cn } from '@/lib/utils';
 
-type LinkVariant = 'primary' | 'secondary' | 'accent' | 'ghost';
-type LinkSize = 'sm' | 'md' | 'lg';
+type LinkVariant =
+  | 'primary'
+  | 'secondary'
+  | 'accent'
+  | 'outline'
+  | 'ghost'
+  | 'link';
 
-interface LinkBrandProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+type LinkBrandProps = {
   children: ReactNode;
   className?: string;
   variant?: LinkVariant;
-  size?: LinkSize;
   href: string;
-  isExternal?: boolean;
-}
+  external?: boolean;
+};
 
 export function LinkBrand({
   children,
   className,
   variant = 'primary',
-  size = 'md',
   href,
-  isExternal = false,
-  ...props
+  external = false,
 }: LinkBrandProps): JSX.Element {
   const variantStyles: Record<LinkVariant, string> = {
-    primary: 'text-primary hover:text-primary/80',
-    secondary: 'text-secondary hover:text-secondary/80',
-    accent: 'text-accent hover:text-accent/80',
-    ghost: 'text-foreground hover:text-primary',
+    primary: 'text-primary hover:text-primary/90 font-ibm-plex',
+    secondary: 'text-secondary hover:text-secondary/90 font-ibm-plex',
+    accent: 'text-accent hover:text-accent/90 font-ibm-plex',
+    outline:
+      'border border-primary text-primary hover:bg-primary/10 font-ibm-plex',
+    ghost: 'text-primary hover:bg-primary/10 font-ibm-plex',
+    link: 'text-primary underline-offset-4 hover:underline font-ibm-plex',
   };
 
-  const sizeStyles: Record<LinkSize, string> = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg',
-  };
+  const commonStyles =
+    'inline-flex items-center justify-center rounded-md font-medium transition-colors';
 
-  const baseStyles = cn(
-    'inline-flex items-center font-medium transition-colors',
-    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent',
-    variantStyles[variant],
-    sizeStyles[size],
-    className
-  );
-
-  if (isExternal) {
+  if (external) {
     return (
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={baseStyles}
-        {...props}
+        className={cn(commonStyles, variantStyles[variant], className)}
       >
         {children}
       </a>
@@ -61,8 +54,11 @@ export function LinkBrand({
   }
 
   return (
-    <NextLink href={href} className={baseStyles} {...props}>
+    <Link
+      href={href}
+      className={cn(commonStyles, variantStyles[variant], className)}
+    >
       {children}
-    </NextLink>
+    </Link>
   );
 }

@@ -29,7 +29,7 @@ export const projectsContent = {
       name: 'ExportMétricas Platform',
       description:
         'Sistema web completo para el registro y gestión de tipos de cajas utilizadas en el proceso de exportación. Implementé funcionalidades para el registro y gestión de exportaciones de banano, incluyendo seguimiento de materiales utilizados y registro de pagos a productores.',
-      // image: '/image-no-found.png?height=300&width=500',
+      image: '/expometricas.jpeg?height=300&width=500',
       stack:
         'React, Node.js, Next.js, NestJS, TypeScript, Prisma, Firebase, React-Query, ChakraUI',
       featured: true,
@@ -39,7 +39,7 @@ export const projectsContent = {
       name: 'BanaMétricas Platform',
       description:
         'Aplicación web para el registro y gestión de fincas bananeras. Desarrollé funcionalidades para el seguimiento de métricas de producción, gestión de trabajadores de finca y registro de transacciones financieras.',
-      // image: '/image-no-found.png?height=300&width=500',
+      image: '/banametricas.jpeg?height=300&width=500',
       stack:
         'React, Node.js, Next.js, NestJS, TypeScript, Prisma, Firebase, React-Query, ChakraUI',
       featured: true,
