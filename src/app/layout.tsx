@@ -1,23 +1,26 @@
 import type { Metadata } from 'next';
-import { Mulish, Raleway, Jost } from 'next/font/google';
+import { IBM_Plex_Sans, Space_Grotesk, Lato } from 'next/font/google';
 import './globals.css';
 import { JSX } from 'react';
 
 import { ThemeProvider } from '@/components/theme/theme-provider';
 
-const mulish = Mulish({
+const ibmPlexSans = IBM_Plex_Sans({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
-  variable: '--font-mulish',
+  variable: '--font-ibm-plex',
 });
 
-const raleway = Raleway({
+const spaceGrotesk = Space_Grotesk({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
-  variable: '--font-raleway',
+  variable: '--font-space-grotesk',
 });
 
-const jost = Jost({
+const lato = Lato({
+  weight: ['400', '700'],
   subsets: ['latin'],
-  variable: '--font-jost',
+  variable: '--font-lato',
 });
 
 export const metadata: Metadata = {
@@ -44,7 +47,7 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${mulish.variable} ${raleway.variable} ${jost.variable}`}
+        className={`${ibmPlexSans.variable} ${spaceGrotesk.variable} ${lato.variable}`}
       >
         <ThemeProvider
           attribute="class"

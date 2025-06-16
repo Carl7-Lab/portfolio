@@ -2,8 +2,8 @@ export const headerBrand = {
   name: {
     first: 'Carlos',
     last: 'Cuesta',
-    firstClass: 'text-blue-600',
-    lastClass: 'text-teal-500',
+    firstClass: 'text-primary',
+    lastClass: 'text-accent',
   },
   navLinks: [
     { label: 'About', href: '#about' },

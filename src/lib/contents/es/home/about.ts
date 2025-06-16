@@ -7,35 +7,35 @@ export const aboutContent = {
     'Mi experiencia abarca desde el desarrollo frontend con React y TypeScript hasta la implementación de backends robustos con Node.js y NestJS. Soy entusiasta del aprendizaje continuo y me dedico a mantenerme al día con las tendencias y avances tecnológicos de la industria.',
   ],
   badges: [
-    { label: 'Problem Solving', color: 'bg-blue-100 text-blue-700' },
-    { label: 'Clean Code', color: 'bg-gray-100 text-gray-700' },
-    { label: 'Aprendizaje Continuo', color: 'bg-green-100 text-green-700' },
-    { label: 'Trabajo en Equipo', color: 'bg-orange-100 text-orange-700' },
+    { label: 'Problem Solving', color: 'bg-primary/10 text-primary' },
+    { label: 'Clean Code', color: 'bg-secondary/10 text-secondary' },
+    { label: 'Aprendizaje Continuo', color: 'bg-accent/10 text-accent' },
+    { label: 'Trabajo en Equipo', color: 'bg-primary/10 text-primary' },
   ],
   cards: [
     {
       icon: 'code',
       title: 'FullStack Development',
       description: '3+ años desarrollando aplicaciones web completas',
-      color: 'from-blue-600 to-blue-500',
+      color: 'from-primary to-primary/80',
     },
     {
       icon: 'cpu',
       title: 'JavaScript/TypeScript',
       description: 'Experiencia avanzada en tecnologías modernas',
-      color: 'from-slate-600 to-slate-500',
+      color: 'from-secondary to-secondary/80',
     },
     {
       icon: 'lightbulb',
       title: 'Código Escalable',
       description: 'Enfoque en soluciones mantenibles y eficientes',
-      color: 'from-teal-600 to-teal-500',
+      color: 'from-accent to-accent/80',
     },
     {
       icon: 'users',
       title: 'Liderazgo Técnico',
       description: 'Experiencia liderando equipos de desarrollo',
-      color: 'from-orange-600 to-orange-500',
+      color: 'from-primary to-primary/80',
     },
   ],
 };

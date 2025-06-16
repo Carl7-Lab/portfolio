@@ -37,7 +37,10 @@ export function HeaderBrand({
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href={`/${lang}`} className="text-2xl font-bold text-primary">
+        <Link
+          href={`/${lang}`}
+          className="text-2xl font-bold text-primary font-space-grotesk"
+        >
           <span className={dict.header.name.firstClass}>
             {dict.header.name.first}
           </span>
@@ -46,7 +49,7 @@ export function HeaderBrand({
             {dict.header.name.last}
           </span>
         </Link>
-        <nav className="hidden md:flex gap-8 text-base font-medium">
+        <nav className="hidden md:flex gap-8 text-base font-medium font-ibm-plex">
           {dict.header.navLinks.map(link => (
             <a
               key={link.href}

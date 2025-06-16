@@ -28,7 +28,7 @@ export const projectsContent = {
       name: 'ExportMétricas Platform',
       description:
         'Complete web system for registering and managing box types used in the export process. I implemented functionalities for registering and managing banana exports, including tracking of materials used and recording payments to producers.',
-      // image: '/placeholder.svg?height=300&width=500',
+      image: '/expometricas.jpeg?height=300&width=500',
       stack:
         'React, Node.js, Next.js, NestJS, TypeScript, Prisma, Firebase, React-Query, ChakraUI',
       featured: true,
@@ -38,7 +38,7 @@ export const projectsContent = {
       name: 'BanaMétricas Platform',
       description:
         'Web application for registering and managing banana farms. I developed functionalities for tracking production metrics, farm worker management, and recording financial transactions.',
-      // image: '/placeholder.svg?height=300&width=500',
+      image: '/banametricas.jpeg?height=300&width=500',
       stack:
         'React, Node.js, Next.js, NestJS, TypeScript, Prisma, Firebase, React-Query, ChakraUI',
       featured: true,
