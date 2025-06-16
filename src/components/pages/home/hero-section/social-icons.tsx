@@ -20,9 +20,8 @@ export function SocialIcons({ dict }: { dict: Dictionary }): JSX.Element {
           <LinkBrand
             key={social.label}
             href={social.href}
-            isExternal={social.href.startsWith('http')}
+            external={social.href.startsWith('http')}
             variant="ghost"
-            size="lg"
             aria-label={social.label}
           >
             {Icon && <Icon className="w-6 h-6" />}
