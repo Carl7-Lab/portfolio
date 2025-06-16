@@ -1,3 +1,5 @@
+import { socialMedia } from '@/lib/social-media';
+
 export const heroContent = {
   name: {
     first: 'Carlos',
@@ -22,21 +24,5 @@ export const heroContent = {
       download: true,
     },
   ],
-  socials: [
-    {
-      label: 'GitHub',
-      href: 'https://github.com/',
-      icon: 'github',
-    },
-    {
-      label: 'LinkedIn',
-      href: 'https://linkedin.com/',
-      icon: 'linkedin',
-    },
-    {
-      label: 'Email',
-      href: 'mailto:correo@correo.com',
-      icon: 'mail',
-    },
-  ],
+  socials: socialMedia,
 };

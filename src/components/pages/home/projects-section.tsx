@@ -43,15 +43,26 @@ export const ProjectsSection: FC<{ dict: Dictionary }> = ({ dict }) => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="relative overflow-hidden">
                   <div
-                    className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-20`}
+                    className={`absolute inset-0 h-[300px] w-[500px] bg-gradient-to-r ${project.gradient} opacity-5`}
                   />
                   <Image
-                    src={project.image || '/placeholder.svg'}
+                    src={
+                      project.image ||
+                      '/image-no-found.png?height=300&width=500'
+                    }
                     alt={project.name}
                     width={500}
                     height={300}
-                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="h-[300px] w-[500px] group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 h-[300px] w-[500px] group-hover:scale-110 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <Badge
+                      variant="secondary"
+                      className="glass-effect text-white border-white/20"
+                    >
+                      Proyecto Privado
+                    </Badge>
+                  </div>
                 </div>
                 <div className="p-6">
                   <TitleBrand

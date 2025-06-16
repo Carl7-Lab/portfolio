@@ -24,13 +24,31 @@ export function CardBrand({
   variant = 'default',
 }: CardBrandProps): JSX.Element {
   const variantStyles: Record<CardVariant, string> = {
-    default: 'bg-card text-card-foreground border-border',
-    bordered: 'bg-background rounded-lg border border-border',
-    elevated: 'bg-card text-card-foreground border-border shadow-lg',
+    default: cn(
+      'bg-card text-card-foreground border-border',
+      'border-gray-200 dark:border-gray-700'
+    ),
+    bordered: cn(
+      'bg-background rounded-lg border border-border',
+      'border-gray-200 dark:border-gray-700'
+    ),
+    elevated: cn(
+      'bg-card text-card-foreground border-border shadow-lg border-2',
+      'border-gray-200 dark:border-gray-700'
+    ),
     ghost: 'bg-transparent rounded-lg',
-    accent: 'bg-accent/10 text-accent border-accent/20',
-    primary: 'bg-primary/10 text-primary border-primary/20',
-    secondary: 'bg-secondary/10 text-secondary border-secondary/20',
+    accent: cn(
+      'bg-accent/10 text-accent border-accent/20',
+      'border-gray-200 dark:border-gray-700'
+    ),
+    primary: cn(
+      'bg-primary/10 text-primary border-primary/20',
+      'border-gray-200 dark:border-gray-700'
+    ),
+    secondary: cn(
+      'bg-secondary/10 text-secondary border-secondary/20',
+      'border-gray-200 dark:border-gray-700'
+    ),
   };
 
   return (
