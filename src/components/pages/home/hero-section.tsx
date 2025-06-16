@@ -10,7 +10,7 @@ import { SocialIcons } from './hero-section/social-icons';
 
 export function HeroSection({ dict }: { dict: Dictionary }): JSX.Element {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[80vh] text-center overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center min-h-[calc(100vh-70px)] text-center overflow-hidden">
       <span className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-60 blur-3xl" />
       <span className="absolute top-40 right-20 w-16 h-16 bg-slate-400 rounded-full opacity-40 blur-2xl" />
       <span className="absolute bottom-40 left-20 w-12 h-12 bg-teal-200 rounded-full opacity-40 blur-2xl" />
