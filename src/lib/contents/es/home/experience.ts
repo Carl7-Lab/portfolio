@@ -8,29 +8,29 @@ export interface ExperienceItem {
 
 export const experienceContent = {
   title: 'Experiencia Profesional',
-  subtitle: 'Mi trayectoria como desarrollador FullStack',
+  subtitle: 'Mi trayectoria como FullStack Developer',
   description:
-    'A lo largo de mi carrera he trabajado en diversos proyectos y empresas, desarrollando soluciones web robustas y escalables, colaborando con equipos multidisciplinarios y aplicando buenas prácticas de desarrollo.',
+    'A lo largo de mi carrera, he trabajado en diversos proyectos y empresas, desarrollando soluciones web robustas y escalables, colaborando con equipos multidisciplinarios y aplicando las mejores prácticas de desarrollo.',
   experiences: [
     {
       company: 'Agropaís | Ecuador',
-      role: 'Front Developer',
-      period: 'August 2024 - May 2025',
+      role: 'Frontend Developer',
+      period: 'Agosto 2024 - Mayo 2025',
       responsibilities: [
-        'Led one developer in the enhancement and optimization of user interfaces for agricultural process management.',
-        'Developed optimized user interfaces for agricultural process management.',
-        'Implemented reusable React and TypeScript components to improve system scalability.',
-        'Optimized performance and enhanced the user experience of the platform.',
+        'Lideré la optimización de UI para un sistema de gestión de procesos agrícolas.',
+        'Desarrollé componentes reutilizables de React + TypeScript para mejorar la escalabilidad.',
+        'Reduje los tiempos de carga en un 25% a través de la optimización de rendimiento.',
       ],
       stack: 'React, TypeScript, TailwindCSS, Next.js, Shadcn, SWR',
     },
     {
       company: 'ExportMétricas',
       role: 'Full Stack Developer',
-      period: 'October 2023 - July 2024',
+      period: 'Octubre 2023 - Julio 2024',
       responsibilities: [
-        'Developed a web application for the registration and management of box types used in the export process.',
-        'Implemented features for the registration and management of banana exports, including tracking materials used and recording payments to producers.',
+        'Construí un sistema para la gestión de operaciones de exportación de banano.',
+        'Implementé módulos para el seguimiento de materiales y gestión de pagos a productores.',
+        'Entregué un diseño completamente responsivo optimizado para dispositivos móviles.',
       ],
       stack:
         'React, NodeJs, Nextjs, Nestjs, Typescript, Prisma, Firebase, React-Query, ChakraUI, Firebase',
@@ -38,10 +38,10 @@ export const experienceContent = {
     {
       company: 'BanaMétricas',
       role: 'Full Stack Developer',
-      period: 'August 2022 - September 2023',
+      period: 'Agosto 2022 - Septiembre 2023',
       responsibilities: [
-        'Developed a web application for the registration and management of banana farms.',
-        'Implemented features for tracking production metrics, managing farm workers, and recording financial transactions.',
+        'Desarrollé una plataforma para la gestión de fincas bananeras.',
+        'Creé módulos para métricas de producción, gestión de trabajadores y registros financieros.',
       ],
       stack:
         'React, NodeJs, Nextjs, Nestjs, Typescript, Prisma, Firebase, React-Query, ChakraUI, Firebase',
@@ -49,9 +49,10 @@ export const experienceContent = {
     {
       company: 'Venco',
       role: 'Full Stack Developer',
-      period: 'January 2022 - July 2022',
+      period: 'Enero 2022 - Julio 2022',
       responsibilities: [
-        'Developed a web application for managing sales and collections. The application includes modules for user management, sales tracking, and report generation. It is targeted at small businesses that sell on credit and are not required to maintain formal accounting records.',
+        'Diseñé y desarrollé un sistema de gestión de ventas y cobranzas para pequeñas empresas.',
+        'Incluí gestión de usuarios, seguimiento de ventas y generación de reportes.',
       ],
       stack: 'React, Typescript, Node, Mongoose, Express',
     },

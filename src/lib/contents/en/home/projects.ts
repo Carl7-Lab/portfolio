@@ -18,7 +18,7 @@ export const projectsContent = {
     {
       name: 'Cluster - Agropaís',
       description:
-        'Complete platform for agricultural process management where I led a developer in improving and optimizing user interfaces. I developed optimized interfaces and implemented reusable components to improve system scalability.',
+        'Agricultural process management system where I led UI optimization and developed reusable React + TypeScript components. Achieved 25% reduction in load times through performance optimization.',
       image: '/cluster.png?height=300&width=500',
       stack: 'React, TypeScript, Next.js, TailwindCSS, Shadcn, SWR',
       featured: true,
@@ -27,7 +27,7 @@ export const projectsContent = {
     {
       name: 'ExportMétricas Platform',
       description:
-        'Complete web system for registering and managing box types used in the export process. I implemented functionalities for registering and managing banana exports, including tracking of materials used and recording payments to producers.',
+        'System for managing banana export operations with modules for materials tracking and producer payment management. Delivered fully responsive design optimized for mobile devices.',
       image: '/expometricas.jpeg?height=300&width=500',
       stack:
         'React, Node.js, Next.js, NestJS, TypeScript, Prisma, Firebase, React-Query, ChakraUI',
@@ -37,7 +37,7 @@ export const projectsContent = {
     {
       name: 'BanaMétricas Platform',
       description:
-        'Web application for registering and managing banana farms. I developed functionalities for tracking production metrics, farm worker management, and recording financial transactions.',
+        'Platform for banana farm management with modules for production metrics, worker management, and financial records.',
       image: '/banametricas.jpeg?height=300&width=500',
       stack:
         'React, Node.js, Next.js, NestJS, TypeScript, Prisma, Firebase, React-Query, ChakraUI',
@@ -47,7 +47,7 @@ export const projectsContent = {
     {
       name: 'CryptoApp',
       description:
-        'Web application to view and capture information about the value of selected cryptocurrencies. Includes modules to view current market value and historical data, with interactive charts for complete analysis.',
+        'Web application for real-time cryptocurrency tracking and analysis. Features interactive charts, historical data visualization, and responsive design.',
       // image: '/placeholder.svg?height=300&width=500',
       stack: 'React, TypeScript, Vite, TailwindCSS',
       featured: false,
@@ -56,7 +56,7 @@ export const projectsContent = {
     {
       name: 'Venco Sales System',
       description:
-        'Application for sales and collections management aimed at small businesses that sell on credit. Includes modules for user management, sales tracking, and report generation.',
+        'Sales and collections management system for small businesses. Includes user management, sales tracking, and report generation.',
       // image: '/placeholder.svg?height=300&width=500',
       stack: 'React, TypeScript, Node.js, Express, Mongoose',
       featured: false,

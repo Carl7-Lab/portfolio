@@ -14,13 +14,12 @@ export const experienceContent = {
   experiences: [
     {
       company: 'Agropaís | Ecuador',
-      role: 'Front Developer',
+      role: 'Frontend Developer',
       period: 'August 2024 - May 2025',
       responsibilities: [
-        'Led one developer in the enhancement and optimization of user interfaces for agricultural process management.',
-        'Developed optimized user interfaces for agricultural process management.',
-        'Implemented reusable React and TypeScript components to improve system scalability.',
-        'Optimized performance and enhanced the user experience of the platform.',
+        'Led UI optimization for an agricultural process management system.',
+        'Developed reusable React + TypeScript components to improve scalability.',
+        'Reduced load times by 25% through performance optimization.',
       ],
       stack: 'React, TypeScript, TailwindCSS, Next.js, Shadcn, SWR',
     },
@@ -29,8 +28,9 @@ export const experienceContent = {
       role: 'Full Stack Developer',
       period: 'October 2023 - July 2024',
       responsibilities: [
-        'Developed a web application for the registration and management of box types used in the export process.',
-        'Implemented features for the registration and management of banana exports, including tracking materials used and recording payments to producers.',
+        'Built a system for managing banana export operations.',
+        'Implemented modules for materials tracking and producer payment management.',
+        'Delivered a fully responsive design optimized for mobile devices.',
       ],
       stack:
         'React, NodeJs, Nextjs, Nestjs, Typescript, Prisma, Firebase, React-Query, ChakraUI, Firebase',
@@ -40,8 +40,8 @@ export const experienceContent = {
       role: 'Full Stack Developer',
       period: 'August 2022 - September 2023',
       responsibilities: [
-        'Developed a web application for the registration and management of banana farms.',
-        'Implemented features for tracking production metrics, managing farm workers, and recording financial transactions.',
+        'Developed a platform for banana farm management.',
+        'Created modules for production metrics, worker management, and financial records.',
       ],
       stack:
         'React, NodeJs, Nextjs, Nestjs, Typescript, Prisma, Firebase, React-Query, ChakraUI, Firebase',
@@ -51,7 +51,8 @@ export const experienceContent = {
       role: 'Full Stack Developer',
       period: 'January 2022 - July 2022',
       responsibilities: [
-        'Developed a web application for managing sales and collections. The application includes modules for user management, sales tracking, and report generation. It is targeted at small businesses that sell on credit and are not required to maintain formal accounting records.',
+        'Designed and developed a sales and collections management system for small businesses.',
+        'Included user management, sales tracking, and report generation.',
       ],
       stack: 'React, Typescript, Node, Mongoose, Express',
     },
