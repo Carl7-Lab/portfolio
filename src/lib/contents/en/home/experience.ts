@@ -18,10 +18,15 @@ export const experienceContent = {
       period: 'August 2024 - May 2025',
       responsibilities: [
         'Led UI optimization for an agricultural process management system.',
-        'Developed reusable React + TypeScript components to improve scalability.',
-        'Reduced load times by 25% through performance optimization.',
+        'Implemented a dynamic form builder system with conditional validation, nested subforms, and real-time API-driven option loading.',
+        'Optimized performance with React Server Components (90% of the system), lazy loading, and code splitting, reducing bundle size by 60% and initial load time by 40%.',
+        'Built an advanced data table system with server-side pagination, dynamic filters and URL state persistence.',
+        'Integrated Leaflet GIS for interactive maps with drawing and area measurement tools.',
+        'Implemented a push notification system using Firebase Cloud Messaging.',
+        'Designed a modular architecture with Shadcn UI, TailwindCSS, and Radix UI, ensuring visual consistency and reusable components.',
       ],
-      stack: 'React, TypeScript, TailwindCSS, Next.js, Shadcn, SWR',
+      stack:
+        'Next.js 14 (App Router), TypeScript, TailwindCSS, Shadcn UI, Radix UI, NextAuth.js, Firebase Cloud Messaging, Leaflet GIS, REST APIs, NUQS, SWR',
     },
     {
       company: 'ExportMétricas',

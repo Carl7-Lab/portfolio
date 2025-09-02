@@ -11,7 +11,7 @@ export interface ProjectItem {
 export const projectsContent = {
   title: 'Proyectos Destacados',
   subtitle:
-    'Mis proyectos más recientes y significativos como FullStack Developer',
+    'Mis proyectos más recientes y significativos como Desarrollador FullStack',
   description:
     'A continuación se muestran algunos de los proyectos en los que he trabajado, aplicando las mejores prácticas, tecnologías modernas y un enfoque en la experiencia del usuario.',
   otherProjectsTitle: 'Otros Proyectos',
@@ -19,16 +19,17 @@ export const projectsContent = {
     {
       name: 'Cluster - Agropaís',
       description:
-        'Sistema de gestión de procesos agrícolas donde lideré la optimización de UI y desarrollé componentes reutilizables de React + TypeScript. Logré una reducción del 25% en los tiempos de carga a través de la optimización de rendimiento.',
+        'Sistema de gestión de procesos agrícolas donde lideré la optimización de UI e implementé un constructor de formularios dinámicos con validación condicional. Logré una reducción del 60% en el tamaño del bundle y una mejora del 40% en el tiempo de carga inicial a través de React Server Components, carga diferida y división de código. Construí tablas de datos avanzadas con paginación del lado del servidor e integré Leaflet GIS para mapas interactivos.',
       image: '/cluster.png?height=300&width=500',
-      stack: 'React, TypeScript, Next.js, TailwindCSS, Shadcn, SWR',
+      stack:
+        'Next.js 14 (App Router), TypeScript, TailwindCSS, Shadcn UI, Radix UI, NextAuth.js, Firebase Cloud Messaging, Leaflet GIS, REST APIs, NUQS, SWR',
       featured: true,
       gradient: 'from-teal-600 to-teal-700',
     },
     {
       name: 'Plataforma ExportMétricas',
       description:
-        'Sistema para la gestión de operaciones de exportación de banano con módulos para seguimiento de materiales y gestión de pagos a productores. Entregué un diseño completamente responsivo optimizado para dispositivos móviles.',
+        'Sistema para gestionar operaciones de exportación de banano con módulos para seguimiento de materiales y gestión de pagos a productores. Entregué un diseño completamente responsivo optimizado para dispositivos móviles.',
       image: '/expometricas.jpeg?height=300&width=500',
       stack:
         'React, Node.js, Next.js, NestJS, TypeScript, Prisma, Firebase, React-Query, ChakraUI',
@@ -48,7 +49,7 @@ export const projectsContent = {
     {
       name: 'CryptoApp',
       description:
-        'Aplicación web para el seguimiento y análisis de criptomonedas en tiempo real. Incluye gráficos interactivos, visualización de datos históricos y diseño responsivo.',
+        'Aplicación web para seguimiento y análisis de criptomonedas en tiempo real. Características de gráficos interactivos, visualización de datos históricos y diseño responsivo.',
       // image: '/placeholder.svg?height=300&width=500',
       stack: 'React, TypeScript, Vite, TailwindCSS',
       featured: false,

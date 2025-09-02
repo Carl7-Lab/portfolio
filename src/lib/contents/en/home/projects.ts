@@ -18,9 +18,10 @@ export const projectsContent = {
     {
       name: 'Cluster - Agropaís',
       description:
-        'Agricultural process management system where I led UI optimization and developed reusable React + TypeScript components. Achieved 25% reduction in load times through performance optimization.',
+        'Agricultural process management system where I led UI optimization and implemented a dynamic form builder with conditional validation. Achieved 60% reduction in bundle size and 40% improvement in initial load time through React Server Components, lazy loading, and code splitting. Built advanced data tables with server-side pagination and integrated Leaflet GIS for interactive maps.',
       image: '/cluster.png?height=300&width=500',
-      stack: 'React, TypeScript, Next.js, TailwindCSS, Shadcn, SWR',
+      stack:
+        'Next.js 14 (App Router), TypeScript, TailwindCSS, Shadcn UI, Radix UI, NextAuth.js, Firebase Cloud Messaging, Leaflet GIS, REST APIs, NUQS, SWR',
       featured: true,
       gradient: 'from-teal-600 to-teal-700',
     },

@@ -8,9 +8,9 @@ export interface ExperienceItem {
 
 export const experienceContent = {
   title: 'Experiencia Profesional',
-  subtitle: 'Mi trayectoria como FullStack Developer',
+  subtitle: 'Mi trayectoria como Desarrollador FullStack',
   description:
-    'A lo largo de mi carrera, he trabajado en diversos proyectos y empresas, desarrollando soluciones web robustas y escalables, colaborando con equipos multidisciplinarios y aplicando las mejores prácticas de desarrollo.',
+    'A lo largo de mi carrera, he trabajado en varios proyectos y empresas, desarrollando soluciones web robustas y escalables, colaborando con equipos multidisciplinarios y aplicando las mejores prácticas de desarrollo.',
   experiences: [
     {
       company: 'Agropaís | Ecuador',
@@ -18,18 +18,23 @@ export const experienceContent = {
       period: 'Agosto 2024 - Mayo 2025',
       responsibilities: [
         'Lideré la optimización de UI para un sistema de gestión de procesos agrícolas.',
-        'Desarrollé componentes reutilizables de React + TypeScript para mejorar la escalabilidad.',
-        'Reduje los tiempos de carga en un 25% a través de la optimización de rendimiento.',
+        'Implementé un sistema constructor de formularios dinámicos con validación condicional, subformularios anidados y carga de opciones en tiempo real impulsada por API.',
+        'Optimicé el rendimiento con React Server Components (90% del sistema), carga diferida y división de código, reduciendo el tamaño del bundle en 60% y el tiempo de carga inicial en 40%.',
+        'Construí un sistema avanzado de tablas de datos con paginación del lado del servidor, filtros dinámicos y persistencia del estado de la URL.',
+        'Integré Leaflet GIS para mapas interactivos con herramientas de dibujo y medición de área.',
+        'Implementé un sistema de notificaciones push usando Firebase Cloud Messaging.',
+        'Diseñé una arquitectura modular con Shadcn UI, TailwindCSS y Radix UI, asegurando consistencia visual y componentes reutilizables.',
       ],
-      stack: 'React, TypeScript, TailwindCSS, Next.js, Shadcn, SWR',
+      stack:
+        'Next.js 14 (App Router), TypeScript, TailwindCSS, Shadcn UI, Radix UI, NextAuth.js, Firebase Cloud Messaging, Leaflet GIS, REST APIs, NUQS, SWR',
     },
     {
       company: 'ExportMétricas',
       role: 'Full Stack Developer',
       period: 'Octubre 2023 - Julio 2024',
       responsibilities: [
-        'Construí un sistema para la gestión de operaciones de exportación de banano.',
-        'Implementé módulos para el seguimiento de materiales y gestión de pagos a productores.',
+        'Construí un sistema para gestionar operaciones de exportación de banano.',
+        'Implementé módulos para seguimiento de materiales y gestión de pagos a productores.',
         'Entregué un diseño completamente responsivo optimizado para dispositivos móviles.',
       ],
       stack:

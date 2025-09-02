@@ -5,6 +5,7 @@ export const aboutContent = {
   paragraphs: [
     'Soy Carlos Cuesta, un Desarrollador Frontend con más de 3 años de experiencia construyendo interfaces responsivas, accesibles y de alto rendimiento. Me especializo en React, Next.js y TypeScript, y tengo amplia experiencia colaborando con equipos de UX/UI para transformar prototipos de Figma en productos funcionales y amigables para el usuario.',
     'Mi experiencia abarca desde el desarrollo frontend con frameworks modernos hasta la implementación de backends robustos con Node.js y NestJS. Soy apasionado por optimizar el rendimiento y la usabilidad, comprometido con el código limpio y mantenible, y dedicado a entregar experiencias de usuario excepcionales.',
+    'He liderado exitosamente proyectos de optimización de UI, implementado constructores de formularios dinámicos con validación condicional, y construido sistemas avanzados de tablas de datos con paginación del lado del servidor. Mi experiencia incluye optimización de rendimiento con React Server Components, carga diferida y división de código, logrando mejoras significativas en tiempos de carga.',
   ],
   badges: [
     {
@@ -14,6 +15,8 @@ export const aboutContent = {
     { label: 'Código Limpio', color: 'bg-secondary/10 text-secondary' },
     { label: 'Colaboración UX/UI', color: 'bg-accent/10 text-accent' },
     { label: 'Diseño Responsivo', color: 'bg-primary/10 text-primary' },
+    { label: 'Integración GIS', color: 'bg-primary/10 text-primary' },
+    { label: 'Notificaciones Push', color: 'bg-secondary/10 text-secondary' },
   ],
   cards: [
     {
