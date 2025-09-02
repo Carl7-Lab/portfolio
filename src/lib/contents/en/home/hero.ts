@@ -10,7 +10,7 @@ export const heroContent = {
   role: 'FullStack Developer',
   tagline: 'Creating exceptional web experiences',
   description:
-    'Frontend Developer with over 3 years of experience building responsive, accessible, and high-performance interfaces. Skilled in React, Next.js, and TypeScript, and experienced in collaborating with UX/UI teams to transform Figma prototypes into functional, user-friendly products. Focused on optimizing performance and usability. Passionate about clean, maintainable code and delivering outstanding user experiences.',
+    'FullStack Developer with over 3 years of experience building responsive, accessible, and high-performance interfaces. Skilled in React, Next.js, and TypeScript, and experienced in collaborating with UX/UI teams to transform Figma prototypes into functional, user-friendly products. Focused on optimizing performance and usability. Passionate about clean, maintainable code and delivering outstanding user experiences.',
   buttons: [
     {
       label: 'View Projects',

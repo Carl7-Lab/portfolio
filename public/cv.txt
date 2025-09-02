@@ -1,0 +1,101 @@
+﻿Carlos Cuesta
+FullStack Developer
+	Machala, Ecuador (GMT-5)
+(+593) 0997198525
+carlosmiguel7cb@gmail.com  https://linkedin.com/in/carlos-miguel-cuesta
+	
+
+Frontend Developer with over 3 years of experience building responsive, accessible, and high-performance interfaces. Skilled in React, Next.js, and TypeScript, and experienced in collaborating with UX/UI teams to transform Figma prototypes into functional, user-friendly products. Focused on optimizing performance and usability. Passionate about clean, maintainable code and delivering outstanding user experiences.
+
+
+
+
+EXPERIENCE
+Frontend Developer - Agropaís|Ecuador, Front Developer— August 2024 - May 2025
+* Led UI optimization for an agricultural process management system covering crop monitoring (planting, harvesting, production), agricultural input sales, and crop insurance services.
+* Developed a query and CRUD system using Server Actions and Next.js API Router, adding a security layer.
+* Granular role-based access control with module-level permissions.
+* Optimized performance with React Server Components, lazy loading, and code splitting, reducing bundle size by 60% and initial load time by 40%.
+* Built a data table system with server-side pagination, dynamic filters and URL state persistence.
+* Integrated Leaflet GIS for interactive maps with drawing and area measurement tools.
+* Implemented a push notification system using Firebase Cloud Messaging.
+* Designed a modular architecture with Shadcn UI and TailwindCSS, ensuring visual consistency and reusable components.
+* Used SWR for server-state management and caching, reducing redundant API calls and improving data fetching performance.
+* Implemented a dynamic form builder system with conditional validation, nested subforms.
+Tech Stack: Next.js 14, TypeScript, TailwindCSS, Shadcn UI, NextAuth.js, Firebase Cloud Messaging, Leaflet GIS, NUQS, SWR, YUP, React-Hook-Form.
+
+
+Full Stack Developer - ExportMétricas, Full Stack Developer— October 2023 - July 2024
+* Development of a comprehensive enterprise web application for the full management of the banana export process, including management of producers, clients, logistics and payments.
+* Implemented a user management system with role-based access control and granular permissions for different user levels.
+* Developed inventory management and product traceability modules from harvest to export.
+* Created an invoicing and payment management system with integration of multiple payment methods and financial report generation.
+* Designed a modular architecture with NestJS using DTOs, guards, interceptors and centralized exception handling.
+* Integrated Firebase for push notifications and user authentication with JWT and refresh tokens.
+* Developed a responsive interface with Chakra UI and Material-UI optimized for mobile and desktop devices.
+* Implemented React Query for efficient server state management, caching and real-time data synchronization.
+* Used Prisma as ORM for database management with PostgreSQL and Firebase for file storage.
+Tech Stack: React, NodeJs, Nextjs, Nestjs, Typescript, Prisma, Firebase, React-Query, ChakraUI, Material-UI, Formik, YUP.
+
+
+Full Stack Developer - BanaMétricas, Full Stack Developer— August 2022 - September 2023
+* Developed a full backend system for agricultural operations management (employees, payroll, farms, tasks, and automated reports).
+* Built a multi-tenant architecture to support multiple agricultural companies with granular role-based permissions.
+* Implemented a payroll automation module handling loans, advances, and work schedules.
+* Created an automated reporting system with PDF generation and dashboards for weekly and monthly metrics.
+* Applied a modular NestJS architecture with DTOs, guards, interceptors, and centralized exception handling.
+* Designed multi-layer security: JWT with refresh tokens, Passport.js, API Keys, password hashing with bcrypt, and full auditing.
+* Automated tasks with cron jobs and email notifications using Resend.
+* Integrated with Firebase (push notifications) and Docker (multi-stage containerization).
+* Ensured system quality with Vitest, E2E and integration tests.
+* Built a comprehensive frontend dashboard with interactive charts and real-time metrics using Recharts.
+* Implementing React Query for efficient server state management, caching, and real-time data synchronization
+* Implemented a modular component architecture with reusable UI components using Chakra UI and Material-UI.
+* Developed form systems with Formik and Yup validation for agricultural data management.
+* Created a responsive design system optimized for mobile devices with touch-friendly interfaces.
+* Implemented role-based access control with dynamic navigation and permission-based UI rendering.
+* Designed an intuitive user interface for managing employees, payroll, work progress, and farm operations.
+* Optimized frontend performance with lazy loading, memoization, and efficient state management.
+Tech Stack: React, NodeJs, Nextjs, Nestjs, Typescript, Prisma, Firebase, React-Query, ChakraUI, Material-UI, Formik, Yup, Recharts, html2canvas, jsPDF.
+
+
+Full Stack Developer - Venco, Full Stack Developer— January 2022 - July 2022
+* Designed and developed a sales and collections management system for small businesses.
+* Included user management, sales tracking, and report generation.
+Tech Stack: React, Typescript, Node, Mongoose, Express.
+
+
+
+
+PROJECTS 
+CryptoApp
+* Web application for real-time cryptocurrency tracking and analysis. Features interactive charts, historical data visualization, and responsive design.
+Tech Stack: React, Typescript, Vite, TailwindCSS.
+
+
+
+
+SKILLS
+Frontend: HTML5, CSS3, JavaScript, TypeScript, React, Next.js, TailwindCSS, Chakra UI, Shadcn.
+Backend: Node.js, Express, NestJS, Prisma.
+Databases: MongoDB, MySQL, PostgreSQL, Firebase.
+Design & UX/UI: Figma, Responsive Design.
+Version Control: Git, GitHub.
+Tools:   Vercel, Docker, DigitalOcean, AWS amplify
+Agile: Scrum
+Languages: Intermediate: English; Native: Spanish.
+
+
+
+
+EDUCATION        
+University of the Armed Forces ESPE – Latacunga, Ecuador. Mechatronic Engineering, February 2024
+
+
+
+
+COURSES  
+- Master in TypeScript – Udemy  
+- React & TypeScript Complete Guide – Udemy  
+- MERN Stack Front to Back – Udemy  
+- Git & GitHub from Scratch – Udemy
