@@ -4,7 +4,7 @@ export const aboutContent = {
     'Combinando pasión por el código con experiencia práctica en desarrollo web',
   paragraphs: [
     'Soy Carlos Cuesta, un Desarrollador FullStack con más de 3 años de experiencia construyendo interfaces responsivas, accesibles y de alto rendimiento. Me especializo en React, Next.js y TypeScript, y tengo amplia experiencia colaborando con equipos de UX/UI para transformar prototipos de Figma en productos funcionales y amigables para el usuario.',
-    'Mi experiencia abarca desde el desarrollo frontend con frameworks modernos hasta la implementación de backends robustos con Node.js y NestJS. Soy apasionado por optimizar el rendimiento y la usabilidad, comprometido con el código limpio y mantenible, y dedicado a entregar experiencias de usuario excepcionales.',
+    'Mi experiencia abarca desde el desarrollo frontend con frameworks modernos hasta la implementación de backends robustos con Node.js, Bun, Hono y NestJS, además de integraciones con Stripe, OpenRouter y Azure Computer Vision. Soy apasionado por optimizar el rendimiento y la usabilidad, comprometido con el código limpio y mantenible, y dedicado a entregar experiencias de usuario excepcionales.',
     'He liderado exitosamente proyectos de optimización de UI, implementado constructores de formularios dinámicos con validación condicional, y construido sistemas avanzados de tablas de datos con paginación del lado del servidor. Mi experiencia incluye optimización de rendimiento con React Server Components, carga diferida y división de código, logrando mejoras significativas en tiempos de carga y tamaño del bundle.',
   ],
   badges: [

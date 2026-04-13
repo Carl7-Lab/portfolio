@@ -13,6 +13,19 @@ export const experienceContent = {
     'A lo largo de mi carrera, he trabajado en diversos proyectos y empresas, desarrollando soluciones web robustas y escalables, colaborando con equipos multidisciplinarios y aplicando las mejores prácticas de desarrollo.',
   experiences: [
     {
+      company: 'Shappi',
+      role: 'Desarrollador FullStack Junior',
+      period: 'Octubre 2024 - Marzo 2026',
+      responsibilities: [
+        'Diseñé e implementé documentación técnica integral utilizando principios de Domain-Driven Design (DDD). Analicé y organicé tablas de bases de datos, creando inventarios estructurados y mapeos de relaciones para múltiples repositorios backend.',
+        'Colaboré en el desarrollo de una landing page, implementando secciones clave y un formulario ligero; me enfoqué en secciones con animaciones para mejorar la interacción y la experiencia de usuario.',
+        'Participé en la incorporación de funcionalidades para una plataforma interna orientada al equipo de operaciones, facilitando la actualización y seguimiento del estado de los paquetes en cada etapa del proceso de entrega.',
+        'En backend, colaboré en el desarrollo de endpoints con distintas funcionalidades e integraciones con Stripe, OpenRouter y Azure Computer Vision.',
+      ],
+      stack:
+        'TypeScript, Bun, Hono, Stripe, OpenRouter, Azure Computer Vision, Angular, Astro, TailwindCSS',
+    },
+    {
       company: 'Agropaís | Ecuador',
       role: 'Frontend Developer',
       period: 'Agosto 2024 - Mayo 2025',

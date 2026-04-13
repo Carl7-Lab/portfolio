@@ -5,7 +5,6 @@ import { CardBrand } from '@/components/common/card-brand/card-brand';
 import { TextBrand } from '@/components/common/typographic/text-brand';
 import { TitleBrand } from '@/components/common/typographic/title-brand';
 import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
 import { Dictionary } from '@/lib/dictionaries';
 
 const iconMap = {
@@ -43,15 +42,13 @@ export const SkillsSection: FC<{ dict: Dictionary }> = ({ dict }) => (
               <div className="flex items-center gap-2 mb-2 text-primary">
                 {Icon && <Icon className="h-6 w-6" />} {category.category}
               </div>
-              {category.items.map((item, idx) => (
-                <div key={idx}>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>{item.name}</span>
-                    <span className="text-muted-foreground">{item.level}%</span>
-                  </div>
-                  <Progress value={item.level} className="h-2" />
-                </div>
-              ))}
+              <div className="flex flex-wrap gap-2">
+                {category.items.map(item => (
+                  <Badge key={item.name} variant="secondary" className="text-sm">
+                    {item.name}
+                  </Badge>
+                ))}
+              </div>
             </CardBrand>
           );
         })}
@@ -66,6 +63,22 @@ export const SkillsSection: FC<{ dict: Dictionary }> = ({ dict }) => (
         </TitleBrand>
         <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
           {dict.home.skills.additional.map(skill => (
+            <Badge key={skill} variant="outline" className="text-sm py-1">
+              {skill}
+            </Badge>
+          ))}
+        </div>
+      </div>
+      <div className="text-center mt-12">
+        <TitleBrand
+          variant="primary"
+          as="h3"
+          className="text-xl font-semibold mb-6"
+        >
+          {dict.home.skills.softSkillsTitle}
+        </TitleBrand>
+        <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+          {dict.home.skills.softSkills.map(skill => (
             <Badge key={skill} variant="outline" className="text-sm py-1">
               {skill}
             </Badge>

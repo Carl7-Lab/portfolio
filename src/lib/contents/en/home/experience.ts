@@ -13,6 +13,19 @@ export const experienceContent = {
     'Throughout my career, I have worked on various projects and companies, developing robust and scalable web solutions, collaborating with multidisciplinary teams, and applying development best practices.',
   experiences: [
     {
+      company: 'Shappi',
+      role: 'Junior FullStack Developer',
+      period: 'October 2024 - March 2026',
+      responsibilities: [
+        'Designed and implemented comprehensive technical documentation using Domain-Driven Design (DDD) principles. I analyzed and organized database tables, building structured inventories and relationship mappings across multiple backend repositories.',
+        'Collaborated on the development of a landing page, implementing key sections and a lightweight form, with a focus on animated sections to improve interaction and user experience.',
+        'Contributed to features for an internal operations platform, helping streamline package status updates and tracking across each delivery stage.',
+        'On the backend side, collaborated on endpoint development with different capabilities and integrations including Stripe, OpenRouter, and Azure Computer Vision.',
+      ],
+      stack:
+        'TypeScript, Bun, Hono, Stripe, OpenRouter, Azure Computer Vision, Angular, Astro, TailwindCSS',
+    },
+    {
       company: 'Agropaís | Ecuador',
       role: 'Frontend Developer',
       period: 'August 2024 - May 2025',
